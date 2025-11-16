@@ -38,7 +38,7 @@ import Cover from "src/components/cover.astro";
 ---
 
 <Baselayout title={title} description={description} >
-  {(post.data.cover && post.data.cover.src && CONFIG.THUMBS == true) && (
+  {(post.data.cover && post.data.cover.src && CONFIG.COVER == true) && (
     <Cover src={post.data.cover.src} alt={post.data.cover.alt || ''} />
   )}
   
