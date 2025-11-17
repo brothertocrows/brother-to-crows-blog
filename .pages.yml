@@ -35,7 +35,19 @@ content:
         label: Body
         type: rich-text
         required: true
-        
+      - name: cover
+        label: Cover
+        type: object
+        fields: 
+          - name: src
+            label: Cover image
+            type: image
+          - name: title
+            label: Title
+            type: string
+          - name: alt
+            label: ALT
+            type: string
   
 
       
