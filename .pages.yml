@@ -24,7 +24,7 @@ content:
         type: string
       - name: CONTACT
         label: Display contact email
-        type: string
+        type: boolean
       - name: EMAIL
         label: Contact email
         type: string
