@@ -1,0 +1,1 @@
+<p>New post mdx 2 body</p>
