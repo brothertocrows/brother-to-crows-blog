@@ -26,6 +26,9 @@ content:
           - name: tag
             label: Tag
             type: string
+      - name: body
+        label: Body
+        type: rich-text
         
   
 
