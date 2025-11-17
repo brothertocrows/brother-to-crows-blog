@@ -1,16 +1,11 @@
-TITLE: My zuper nice blog
+TITLE: My mega zuper nice blog
 URL: www.url.com
-DESCRIPTION: This is a blog about so many things
+DESCRIPTION: This is a blog about so many things and more
 LANG: EN
 AUTHOR: John Doe
-CONTACT: true
+CONTACT: false
 EMAIL: contact@contact.com
 POST_COVER: true
 POST_THUMBNAILS: true
 POST_SUGGESTIONS: true
 HOME_NB_POSTS: 6
-MENU:
-   -  label: RSS
-      url: /rss.xml
-   -  label: About
-      url: /about
