@@ -46,7 +46,6 @@ content:
         default: 6
       - name: MENU
         label: Navigation menu
-        default: 6
         type: list
         fields:
           - name: label
