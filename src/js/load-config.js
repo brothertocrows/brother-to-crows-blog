@@ -35,11 +35,15 @@ let getUseConfigFromFile = (configFileName) => {
         return {configError: 'YAML CONFIG array is empty'};
     }
     
-    let userConfigFromFile = {};
+    console.log("yamlObject.CONFIG", yamlObject.CONFIG)
+    let userConfigFromFile = yamlObject.CONFIG;
+    /*
     yamlObject.CONFIG.forEach(el => {
         Object.assign(userConfigFromFile, el)
     });
+    */
 
+    console.log("userConfigFromFile", userConfigFromFile)
     return userConfigFromFile;
 }
  
