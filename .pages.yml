@@ -51,7 +51,15 @@ content:
             label: ALT
             type: string
   
-
+  - name: footer
+    label: "Footer text"
+    type: file
+    path: src/data/footer.mdx
+    fields:
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
       
   - name: CONFIG
     label: "Blog Config"
