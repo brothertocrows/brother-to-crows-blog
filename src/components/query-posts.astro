@@ -29,12 +29,13 @@ posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 ---
 {posts.length > 0 && (
-  <ul id="all-posts">
-    {heading && (
+  <>
+  {heading && (
       <hr>
       <span set:html={heading}></span>
     )}
-
+  </>
+  <ul id="all-posts">
     {posts.map(async (post) => {
         return (
           <li>
