@@ -1,10 +1,10 @@
 ---
 import Baselayout from "../layouts/baselayout.astro";
 
+import PostHeader from "src/components/post-header.astro";
 import PrintFooter from "src/components/print-footer.astro";
 import PostFooter from "src/components/post-footer.astro";
 
-import Tags from "src/components/tags.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -24,14 +24,8 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { slug } = Astro.params;
-const { title, tags, pubDate, description, cover } = post.data;
 
-const isoDate = post.data.pubDate.toISOString();
-const readableDate = post.data.pubDate.toLocaleDateString("en-GB", {
-  year: "numeric",
-  month: "short",
-  day: "numeric",
-});
+const { title, tags, pubDate, description, cover } = post.data;
 
 const { Content } = await post.render();
 
@@ -55,18 +49,11 @@ import Cover from "src/components/cover.astro";
   }
 
   <article class="post">
-    <header class="article-header">
-      <h1>{title}</h1>
-      <article-meta>
-        <article-date>
-          <time datetime={isoDate}>{readableDate}</time>
-        </article-date>
-        <Tags allPostTags={tags} />
-      </article-meta>
-      <h2 class="text-none">{description}</h2>
-    </header>
+   
+    <PostHeader title={title} description={description} pubDate={post.data.pubDate} tags={tags} />
 
     <Content />
+
     <PostFooter
       queryFilters={queryFilters}
       heading={frontmatter.postSuggestionHeading}

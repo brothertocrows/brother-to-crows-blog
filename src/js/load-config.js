@@ -51,7 +51,6 @@ const DEFAULT_CONFIG = {
     AUTHOR: 'John Doe',
     CONTACT: true,
     EMAIL: 'contact@contact.com',
-    COVER: false,
     POST_COVER: true,
     POST_THUMBNAILS: true,
     HOME_NB_POSTS: 4,

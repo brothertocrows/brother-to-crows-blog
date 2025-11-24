@@ -1,9 +1,11 @@
 ---
-import Tags from "./tags.astro";
+import PostHeader from "./post-header.astro";
+
 import { getCollection } from "astro:content";
+
 const allPosts = await getCollection("posts");
 
-const { queryFilters, heading, nbPosts, hasCover = false } = Astro.props;
+const { queryFilters, nbPosts, hasCover = false } = Astro.props;
 
 const tagFilters: string[] = [].concat( queryFilters?.tags || ["all"]);
 
@@ -12,11 +14,8 @@ const postFilters: string[] = [].concat( queryFilters?.posts || [""] );
 const filteredByDraftStatus = allPosts.filter( post => post.data.status === 'published')
 
 const filteredByTag = filteredByDraftStatus.filter( post =>
-
   tagFilters.includes("all") || post.data.tags.some( tag => tagFilters.includes(tag))
 );
-
-
 
 const filteredBySlug = filteredByTag.filter( post => { 
   const slug = post.slug;
@@ -27,48 +26,16 @@ const posts = nbPosts ? filteredBySlug.slice(0, nbPosts) : filteredBySlug;
 
 posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-import { CONFIG } from "@config";
-
-import Cover from "./cover.astro";
-import { late } from "astro:schema";
 ---
 {posts.length > 0 && (
   <ul id="all-posts">
-    {heading && (
-      <hr>
-      <span set:html={heading}></span>
-      
-    )}
+
     {posts.map(async (post) => {
-        const eltPostWrapperCLass = (hasCover && post.data.cover && post.data.cover.src && CONFIG.POST_COVER == true) ? "duo-lg mt-base" : "block mt-base";
-        const isoDate = post.data.pubDate.toISOString();
-        const readableDate = post.data.pubDate.toLocaleDateString("en-GB", {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-});
-        // Mark the map callback as async
         return (
           <li>
             <article class="post-preview">
-                <h2>
-                    <a href={`${import.meta.env.BASE_URL}${post.slug}`}>{post.data.title}</a>
-                </h2>
-                <time datetime={isoDate}>{readableDate}</time>
-                <div class={eltPostWrapperCLass}>
-                  {(hasCover && post.data.cover && post.data.cover.src && CONFIG.POST_COVER == true) && (
-                    <post-cover class="block">
-                        <Cover src={post.data.cover.src} alt={post.data.cover.alt || ''} className="mt-0 "/>
-                    </post-cover>
-                  )}
-                    <post-meta>
-                        <p class="mh-0">{post.data.description}</p>
-                        <Tags postTitle = {post.data.title} allPostTags = {post.data.tags} />
-                    </post-meta>
-        
-                </div>
-
-          </article>
+              <PostHeader hasCover={hasCover} coverSrc={post.data.cover?.src} coverAlt={post.data.cover?.src} url={`${import.meta.env.BASE_URL}${post.slug}`} title={post.data.title} titleTag='h2' description={post.data.description} descriptionTag = 'p' pubDate={post.data.pubDate} tags={post.data.tags} />
+            </article>
           </li>
 
         );

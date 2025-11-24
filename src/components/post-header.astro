@@ -1,10 +1,16 @@
 ---
 import Tags from "src/components/tags.astro";
+import Cover from "./cover.astro";
 
-const { title='', description='', pubDate, tags=[] } = Astro.props;
+const { hasCover=false, url, title='', titleTag = 'h1', description='', descriptionTag = 'h2', pubDate, tags=[], coverSrc='', coverAlt='' } = Astro.props;
 
-const isoDate = pubDate.toISOString();
-const readableDate = pubDate.toLocaleDateString("en-GB", {
+console.log(hasCover, url, title, 'coverSrc:', coverSrc, 'coverAlt:', coverAlt)
+
+const Heading = titleTag;
+const Description = descriptionTag;
+
+const isoDate = pubDate && pubDate.toISOString();
+const readableDate = pubDate && pubDate.toLocaleDateString("en-GB", {
   year: "numeric",
   month: "short",
   day: "numeric",
@@ -12,12 +18,13 @@ const readableDate = pubDate.toLocaleDateString("en-GB", {
 
 ---
 <header class="article-header">
-    <h1>{title}</h1>
+    {url ? <Heading><a href={url}>{title}</a></Heading> : <Heading>{title}</Heading>}
     <article-meta>
       <article-date>
-        <time datetime={isoDate}>{readableDate}</time>
+        {pubDate && <time datetime={isoDate}>{readableDate}</time>}       
       </article-date>
       <Tags allPostTags={tags} />
     </article-meta>
-    <h2 class="text-none">{description}</h2>
+    {hasCover && <Cover src={coverSrc} alt={coverAlt} />}
+    <Description class="text-none">{description}</Description>
 </header>
