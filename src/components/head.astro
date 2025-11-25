@@ -20,6 +20,10 @@ const { title, description, type } = Astro.props;
     <meta property="og:url" content={canonicalURL}>
     <meta property="og:type" content={type || "website"}>
 
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png"><!-- 180×180 -->
+
     <!-- 
     <meta property="og:image" content=>{image ? image : ""}
     <meta property="og:image:alt" content=>{alt ? alt : ""}
