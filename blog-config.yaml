@@ -16,5 +16,5 @@ MENU:
   - label: Archive
     url: /archive
 BLOG_COVER:
-  src: ../media/obr_large.png
+  src: /obr_large.png
   alt: Open Blog Revolution
