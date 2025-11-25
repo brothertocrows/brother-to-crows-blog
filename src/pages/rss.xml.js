@@ -22,9 +22,9 @@ export async function GET(context) {
             description: post.data.description,
             // Compute RSS link from post `id`
             // This example assumes all posts are rendered as `/blog/[id]` routes
-            link: `${post.data.postSlug}/`,
+            link: `${post.data.slug}/`,
           })),
         // (optional) inject custom xml
-        customData: `<language>${CONFIG.LANG}/language>`,
+        customData: `<language>${CONFIG.LANG}</language>`,
     });
 }
