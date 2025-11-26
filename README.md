@@ -74,6 +74,6 @@ cover:
   alt: string
 ---
 ```
-Posts must have at least one tag
+Posts must have at least one tag.
 
 `.mdx` is similar to Markdown but allows you to use HTML tags.
