@@ -1,6 +1,12 @@
 # Open Blog Revolution (OBR)
 
-## ✨ Features
+HTML first blog template for writers and devs.
+
+![OBR Banner](./pubblic/obr_large.png)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/the-coded-type/open-blog-revolution)
+
+## Features
 
 * **Built with Astro 5:** Blazing fast performance and modern architecture.
 * **Pages CMS Compatible:** User-friendly, Git-based CMS for editing content (No database required!).
