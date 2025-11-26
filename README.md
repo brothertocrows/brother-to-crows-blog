@@ -1,5 +1,17 @@
 # Open Blog Revolution (OBR)
 
+## ✨ Features
+
+* **Built with Astro 5:** Blazing fast performance and modern architecture.
+* **Pages CMS Compatible:** User-friendly, Git-based CMS for editing content (No database required!).
+* **Resilient Web Desing:** Built with Resiliient Web Design principles in mind for better accessibility.
+* **Optimized Images:** Automatic image optimization (WebP/AVIF generation) using Astro Assets.
+* **SEO Ready:** Includes Open Graph tags, Sitemap generation.
+* **Responsive:** Mobile-first design, designed for any device.
+* **Tagging and Archive System:** Organize posts by tags with dedicated tags and archive pages.
+* **RSS** RSS Feed included.
+* **Zero JavaScript Runtime:** (Mostly) static HTML for maximum speed.
+
 ## What is this?
 
 A free template for building self-hosted blogs.
