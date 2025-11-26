@@ -17,7 +17,7 @@ OBR is an HTML-first blog template. It adheres to the principles of [Resilient W
 ## Who is it for?
 
 * Writers who look for a simple solution to build self-hosted blogs.
-* Developers who look for a starter template to expand.
+* Developers who look for a starter template to expand on.
 
 ## Self-hosting?
 
@@ -25,7 +25,7 @@ Any OBR blog can be hosted anywhere. This document provides instructions to inst
 
 ## License
 
-Released under the MIT License
+Released under the [MIT License](./LICENSE.md)
 
 ## Installation on Netlify
 
