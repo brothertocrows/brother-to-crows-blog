@@ -49,7 +49,7 @@ const DEFAULT_CONFIG = {
     STYLE: 'sans',
     AUTHOR: 'Iko',
     CONTACT: true,
-    EMAIL: 'iko@thecodedtype.com',
+    EMAIL: 'youremail@email.com',
     POST_COVER: true,
     POST_THUMBNAILS: true,
     HOME_NB_POSTS: 6,
