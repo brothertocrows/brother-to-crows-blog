@@ -1,5 +1,5 @@
 media:
-  - name: Posts_Media
+  - name: Media
     input: src/content/media
     output: ../media
 content:
