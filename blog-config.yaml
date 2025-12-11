@@ -9,7 +9,7 @@ EMAIL: youremail@email.com
 POST_COVER: false
 POST_THUMBNAILS: true
 POST_SUGGESTIONS: true
-HOME_NB_POSTS: 6
+HOME_NB_POSTS: 5
 MENU:
   - label: RSS
     url: /rss.xml
