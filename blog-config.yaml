@@ -1,12 +1,12 @@
-TITLE: Open Blog Revolution
-URL: https://tct-ab2.netlify.app/
-DESCRIPTION: Free blog template
+TITLE: The Raven's Nest
+URL: https://brothertocrowsblog.netlify.app/
+DESCRIPTION: Home of Brother to Crow's Blog
 LANG: EN
 STYLE: sans
-AUTHOR: Iko
-CONTACT: true
+AUTHOR: Crow
+CONTACT: false
 EMAIL: youremail@email.com
-POST_COVER: true
+POST_COVER: false
 POST_THUMBNAILS: true
 POST_SUGGESTIONS: true
 HOME_NB_POSTS: 6
@@ -15,6 +15,3 @@ MENU:
     url: /rss.xml
   - label: Archive
     url: /archive
-BLOG_COVER:
-  src: obr_large.png
-  alt: Open Blog Revolution
